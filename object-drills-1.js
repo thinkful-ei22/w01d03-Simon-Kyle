@@ -66,4 +66,41 @@
 // console.log(test.fullName());
 
 
-******** Self-reference ************
+// ******** Deleting keys ************
+
+// const sampleObj = {
+//   foo: 'foo',
+//   bar: 'bar',
+//   bizz: 'bizz',
+//   bang: 'bang',
+// };
+
+// function keyDeleter(obj) {
+
+//   // Easy to understand version:
+//   const unwantedKeys = ['foo', 'bar'];
+//   for (const key in obj) {
+//     if (unwantedKeys.includes(key)) {
+//       delete obj[key];
+//     }
+//   }
+
+//   // Faster(?) version:
+//   // const unwantedKeys = ['foo', 'bar'];
+//   // const allKeys = Object.keys(obj);
+//   // for (let i = 0; i < unwantedKeys.length; i++ ) {
+//   //   const currentKey = unwantedKeys[i];
+//   //   if (allKeys.includes(currentKey)) {
+//   //     delete obj[currentKey];
+//   //   }
+//   // }
+
+//   // Simple Version:
+//   // delete obj.foo;
+//   // delete obj.bar;
+//   return obj;
+// }
+
+// console.log(sampleObj);
+// keyDeleter(sampleObj);
+// console.log(sampleObj);
