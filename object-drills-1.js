@@ -14,3 +14,30 @@
 // const myObject = createMyObject();
 
 // console.log(myObject.sayHello());
+
+
+
+// ******** Object updater ************
+function updateObject(obj) {
+  // First version:
+  // const tempObj = {
+  //   foo: 'foo',
+  //   bar: 'bar',
+  //   bizz: 'bizz',
+  //   bang: 'bang',
+  // };
+  // return Object.assign(obj, tempObj);
+
+  // Cleaner(?) version:
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
+
+  return obj;
+}
+
+const orig = {hello: 'hello',};
+console.log(orig);
+updateObject(orig);
+console.log(orig);
