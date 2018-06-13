@@ -27,7 +27,7 @@ const fellowship = [elf, dwarf, man, wizard];
 
 function getInfo(arr) {
   arr.forEach(el => {
-    const reportsTo = `${el.boss ? `reports to ${el.boss}.` : 'doesn\'t report to anybody.'}`
+    const reportsTo = `${el.boss ? `reports to ${el.boss}.` : 'doesn\'t report to anybody.'}`;
     console.log(`${el.name} the ${el.jobTitle} ${reportsTo}`);
   });
 }
