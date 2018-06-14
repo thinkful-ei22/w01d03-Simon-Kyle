@@ -29,12 +29,8 @@ function findOne(arr, query) {
     }
     if (count === queryValues.length) {
       result = arr[i];
-    } else if (count !== queryValues.length) {
-      count = 0;
-      objectValues = [];
+      break;
     }
-  }
-  console.log(queryValues);
   return result;
 }
 
