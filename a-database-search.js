@@ -25,11 +25,7 @@ function findOne(arr, query) {
   }
   if (count === keys.length - 1) {
     result = arr[t];
-  } 
+  }
   return result;
-} 
-
-console.log(findOne(HEROES, {id: 1, name: 'Captain America'}));
-
-
+}
 

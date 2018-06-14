@@ -1,7 +1,7 @@
 'use strict';
 
-function createCharacter(name, nickname, race, origin, attack, defense) {
 
+function createCharacter(name, nickname, race, origin, attack, defense) {
   return {
     name,
     nickname,
@@ -22,7 +22,6 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
       const damageToSelf = (opponent.attack - this.defense) > 0 ? opponent.attack - this.defense : 0;
       return `Your opponent takes ${damageToOpponent} damage and you receive ${damageToSelf} damage`;
     },
-
   };
 }
 

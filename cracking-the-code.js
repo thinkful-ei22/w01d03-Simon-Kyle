@@ -1,33 +1,26 @@
 'use strict';
 
+const cipher = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+};
+
 function decode(str) {
+  const num = cipher[str[0]];
 
-  const cipher = {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: 4,
-  };
-
-  const decoder = function(letter) {
-    return cipher[letter];
-  };
-
-  let decodedLetter = ' ';
-
-  for (var key in cipher) {
-    if (key === str[0]) {
-      decodedLetter = str[decoder(str[0])];
-    } 
+  if (num) {
+    return str[num];
   }
 
-  return decodedLetter;
+  return ' ';
 }
 
 function decodeWords(str) {
   return str
     .split(' ')
-    .map(el => decode(el))
+    .map(decode)
     .join('');
 }
 
