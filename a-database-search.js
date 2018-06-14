@@ -11,8 +11,8 @@ const HEROES = [
 ];
 
 function findOne(arr, query) {
-  const queryValues = []; 
-  let objectValues = [];  
+  const queryValues = [];
+  let objectValues = [];
   let count = 0;
   let result = null;
   for (let key in query) {
@@ -29,8 +29,11 @@ function findOne(arr, query) {
     }
     if (count === queryValues.length) {
       result = arr[i];
-      break;
+    } else if (count !== queryValues.length) {
+      count = 0;
+      objectValues = [];
     }
+  }
   return result;
 }
 
@@ -43,4 +46,3 @@ console.log(findOne(HEROES, { id: 2, name: 'Aquaman' }));
 console.log(findOne(HEROES, { id: 5, squad: 'Justice League' }));
 
 console.log(findOne(HEROES, { squad: 'Justice League' }));
-
