@@ -18,7 +18,7 @@ function findOne(arr, query) {
   for (let key in query) {
     queryValues.push(query[key]);
   }
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = arr.length - 1; i >= 0; i--) {
     for (let key in arr[i]) {
       objectValues.push(arr[i][key]);
     }
@@ -37,4 +37,12 @@ function findOne(arr, query) {
   return result;
 }
 
-console.log(findOne(HEROES, {name: 'Hulk', squad: 'Avengers'}));
+console.log(findOne(HEROES, { id: 1 }));
+
+console.log(findOne(HEROES, { id: 10 }));
+
+console.log(findOne(HEROES, { id: 2, name: 'Aquaman' }));
+
+console.log(findOne(HEROES, { id: 5, squad: 'Justice League' }));
+
+console.log(findOne(HEROES, { squad: 'Justice League' }));
