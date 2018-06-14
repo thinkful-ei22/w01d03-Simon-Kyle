@@ -11,8 +11,8 @@ const HEROES = [
 ];
 
 function findOne(arr, query) {
-  const queryValues = []; //4
-  let objectValues = [];  //4 superman justiceLeague
+  const queryValues = []; 
+  let objectValues = [];  
   let count = 0;
   let result = null;
   for (let key in query) {
